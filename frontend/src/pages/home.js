@@ -4,6 +4,7 @@ import Cookies from 'js-cookie';
 import Navbar from '../components/navbar'
 import Products from '../components/Products'; // Adjust the import based on your file structure
 import Footer from '../components/footer';
+import Chatbot from '../components/chatBot';
 import { jwtDecode } from "jwt-decode";
 
 //import './Home.css'; // Optional: CSS file for styling
@@ -32,14 +33,13 @@ const Home = () => {
 
   return (
     <div>
-      {/* Navigation Bar */}
-      <Navbar user={user} /> {/* Pass the user to the Navbar */}
+      <Navbar user={user} />
 
-      {/* Product List */}
       <Products />
 
-      {/* Footer */}
       <Footer />
+
+      <Chatbot />
     </div>
   );
 };
