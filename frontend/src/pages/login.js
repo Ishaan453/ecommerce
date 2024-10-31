@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import '../components/CSS/login.css'; // Importing the CSS file for styling
-import placeholder from '../../src/assets/placeholder.png'; // Placeholder image
+import placeholder from '../../src/assets/symbilogo.png'; // Placeholder image
 
 const Login = () => {
   const [email, setEmail] = useState('');

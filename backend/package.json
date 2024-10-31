@@ -4,7 +4,10 @@
   "description": "backend",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+     "dev": "nodemon server.js",
+     "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start"
+    
+   
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +19,8 @@
     "express": "^4.21.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7" 
   }
 }
