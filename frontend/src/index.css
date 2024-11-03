@@ -5,9 +5,39 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px; /* Base font size */
+  line-height: 1.5; /* Improved line height for readability */
+}
+
+/* Responsive Body Font Size */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px; /* Slightly smaller font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Smaller font size for mobile devices */
+  }
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  font-size: inherit; /* Inherits font size from body, maintaining responsiveness */
+  line-height: 1.5; /* Ensure good readability for code */
+}
+
+/* Responsive Code Font Size */
+@media (max-width: 768px) {
+  code {
+    font-size: 0.9em; /* Slightly smaller code font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  code {
+    font-size: 0.85em; /* Further smaller code font size for mobile devices */
+  }
 }

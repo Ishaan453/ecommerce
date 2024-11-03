@@ -7,15 +7,15 @@
 .orders-list {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 40px; /* Reduced gap for better spacing on smaller screens */
 }
 
 .order-item {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
-  gap: 10px; /* Space between products and order details */
+  grid-template-columns: 1fr 1fr; /* Two columns for larger screens */
+  gap: 10px;
   padding: 20px;
-  margin-bottom: 20px; /* Space between each order */
+  margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f9f9f9;
@@ -37,12 +37,11 @@
 
 .order-product {
   display: flex;
-  align-items: center; /* Aligns items vertically in the center */
-  gap: 10px; 
-  flex: 1 1 300px; /* Makes each product take up at least 150px in width */
-  max-width: 350px; /* Limits the maximum width of each product */
-  max-height: 200px; /* Limit height to keep the container shorter */
-
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 300px;
+  max-width: 350px;
+  max-height: 200px;
   border: 1px solid #ddd;
   padding: 10px;
   border-radius: 8px;
@@ -60,7 +59,6 @@
 .order-product-info {
   display: flex;
   flex-direction: column;
-  
 }
 
 .order-item h3,
@@ -71,4 +69,44 @@
 .order-item h3 {
   font-size: 18px;
   font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .orders-container {
+    width: 90%;
+  }
+
+  .order-item {
+    grid-template-columns: 1fr; /* Switch to single-column layout */
+  }
+
+  .order-product {
+    max-width: 100%; /* Full width on smaller screens */
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .order-item {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .order-product-image {
+    width: 60px; /* Smaller image size */
+    height: 60px;
+  }
+
+  .order-item h3 {
+    font-size: 16px;
+  }
+
+  .order-item p {
+    font-size: 14px;
+  }
 }

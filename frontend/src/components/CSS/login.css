@@ -1,112 +1,137 @@
 /* Container for the login page */
 .login-container {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f2f5;
-  }
-  
-  /* Image on the left side */
-  .login-image {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .login-image img {
-    width: 70%;
-    max-width: 400px;
-    border-radius: 8px;
-  }
-  
-  /* Styling the text below the image */
-  .image-text {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #555;
-    text-align: center;
-  }
-  
-  /* Form container */
-  .login-form-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  /* The actual login form */
-  .login-form {
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .login-form h2 {
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 24px;
-    text-align: center;
-  }
-  
-  /* Input fields styling */
-  .login-input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  /* Button styles */
-  .login-button, .signup-button {
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    padding: 14px 20px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .signup-button {
-    background-color: #28a745; /* Green for the sign-up button */
-  }
-  
-  .login-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .signup-button:hover {
-    background-color: #218838;
-  }
-  
-  /* Make the page responsive */
-  @media (max-width: 768px) {
-    .login-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+}
+
+/* Image on the left side */
+.login-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-image img {
+  width: 70%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+/* Styling the text below the image */
+.image-text {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+}
+
+/* Form container */
+.login-form-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* The actual login form */
+.login-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Input fields styling */
+.login-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Button styles */
+.login-button, .signup-button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 14px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button {
+  background-color: #28a745; /* Green for the sign-up button */
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.signup-button:hover {
+  background-color: #218838;
+}
+
+/* Make the page responsive */
+@media (max-width: 768px) {
+  .login-container {
       flex-direction: column;
-    }
-  
-    .login-image {
-      display: none;
-    }
-  
-    .login-form-container {
+      padding: 20px;
+  }
+
+  .login-image {
+      display: none; /* Hide the image on smaller screens */
+  }
+
+  .login-form-container {
       width: 100%;
       padding: 10px;
-    }
   }
-  
+
+  .login-form {
+      padding: 30px;
+      max-width: 100%; /* Full width on smaller screens */
+  }
+}
+
+/* Additional styling for very small screens (like phones) */
+@media (max-width: 480px) {
+  .login-form {
+      padding: 20px;
+  }
+
+  .login-form h2 {
+      font-size: 20px;
+  }
+
+  .login-input {
+      padding: 10px;
+      font-size: 14px;
+  }
+
+  .login-button, .signup-button {
+      padding: 12px;
+      font-size: 14px;
+  }
+}

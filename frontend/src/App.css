@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 40vmin; /* This keeps the logo responsive */
   pointer-events: none;
 }
 
@@ -15,24 +15,39 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh; /* Keeps the header full height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin); /* Responsive font size */
   color: white;
+  padding: 20px; /* Add padding for small screens */
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Smaller font size for tablets */
+    padding: 15px; /* Reduced padding */
   }
-  to {
-    transform: rotate(360deg);
+
+  .App-logo {
+    height: 30vmin; /* Smaller logo size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    font-size: calc(6px + 2vmin); /* Further smaller font size for mobile */
+    padding: 10px; /* Further reduced padding */
+  }
+
+  .App-logo {
+    height: 25vmin; /* Further smaller logo size for mobile */
   }
 }
